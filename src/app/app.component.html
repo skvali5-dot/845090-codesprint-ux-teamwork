@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+
+    <!-- <link rel="stylesheet" href="assets/css/index.css" type="text/css" /> -->
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <!--Logo Transparent-->
+        <table id="t1">
+            <tr>
+                <td>
+                  
+                    <img src='../assets/images/logo.PNG' class="rounded-circle" alt="Not"
+                         id="i1">
+                  
+                </td>
+                <td></td>
+                <td>
+                    <marquee id="m" direction ="left" >
+                        <strong>Happiness </strong>doesn't result from what we get,
+                        but from what we get.....
+                    </marquee>
+                </td>
+            </tr>
+        </table>
+        <div class="row">
+          <nav class="navbar navbar-expand-lg ">
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                <a class="nav-link" [routerLink]="['/home']"><span class="glyphicon glyphicon-home"></span>Home</a>
+                </li>
+                <li class="nav-item ">
+                <a class="nav-link" [routerLink]="['/placeorder']"><span class="glyphicon glyphicon-shopping-cart"></span>  Place GiftCard Order</a>
+                </li>
+                <li class="nav-item ">
+                <a class="nav-link" [routerLink]="['/vieworder']"><span class="glyphicon glyphicon-gift"></span>  View GiftCard Order</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/contact']"><span class="glyphicon glyphicon-earphone"></span>  Contact us</a>
+                </li>  
+              </ul>
+            </div> 
+          </nav>
+        </div>
+        <section>
+        <div class="row">
+          <div class="col-4">
+            <div class="sidebar ">
+              <a [routerLink]="['/home']"><span class="glyphicon glyphicon-user"></span> Home</a><br><br>
+              <a [routerLink]="['/placeorder']"><span class="glyphicon glyphicon-shopping-cart"></span>  Place GiftCard Order</a><br><br>
+              <a [routerLink]="['/vieworder']"><span class="glyphicon glyphicon-gift"></span>  View GiftCard Order</a><br><br>
+              <a [routerLink]="['/contact']"><span class="glyphicon glyphicon-earphone"></span>  ContactUs</a><br><br>
+            </div>
+           </div>
+          <div class="col-7">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+        </section>
+      </header>
+      <footer>
+        <div class="footer-copyright text-center py-3">
+            @CopyRight:
+            <a href="https://www.gyft.com">GiftCard.com</a>
+        </div>
+      </footer>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+ 

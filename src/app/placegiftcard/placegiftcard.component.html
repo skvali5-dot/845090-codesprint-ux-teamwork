@@ -1,0 +1,153 @@
+
+<br/>
+<br/>
+<br/>
+<div class="container" >
+    <div class="row">
+    
+        <form [formGroup]="placegift" (ngSubmit)="OnSubmit()">  
+            <div class="row">    
+                <div class="offset-4 col-4">
+                    <label for="GiftCardAmount">GiftCardAmount</label><br>
+                    <label>INR:</label>
+                    <input type="number"formControlName="inr" autofocus placeholder="1234" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.inr.errors }" />
+                    <div *ngIf="submitted && f.inr.errors" class="invalid-feedback">
+                        <div *ngIf="f.inr.errors.required">INR is required</div>
+                        <div *ngIf="f.inr.errors.pattern">INR must contain numbers</div>
+                    </div>
+                </div>
+                <div class="col-4">            <br>            <label>PAISA:</label>
+                    <input type="number" formControlName="paisa" placeholder="23" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.paisa.errors }" />
+                    <div *ngIf="submitted && f.paisa.errors" class="invalid-feedback">
+                        <div *ngIf="f.paisa.errors.required">PASIA is required</div>
+                        <div *ngIf="f.paisa.errors.pattern">PASIA must contain numbers</div>
+                    </div>
+                    </div>
+                   
+            </div>
+            <div class="row">
+                <div class="form-group  offset-4">
+                    <!-- <label>Recepient Home</label> -->
+                    <label >First Name</label>
+                    <input type="text" formControlName="fn" placeholder="eg:Sai" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fn.errors }" />
+                    <div *ngIf="submitted && f.fn.errors" class="invalid-feedback">
+                        <div *ngIf="f.fn.errors.required">first name is required</div>
+                        <div *ngIf="f.fn.errors.pattern">first name must contain alphabets</div>
+                    </div>
+                </div>
+                    <div class="form-group  offset-4">
+                    <label>LastName</label>          
+                    <input type="text" formControlName="ln" placeholder="eg:surname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ln.errors }" />
+                    <div *ngIf="submitted && f.ln.errors" class="invalid-feedback">
+                        <div *ngIf="f.ln.errors.required">last name is required</div>
+                        <div *ngIf="f.ln.errors.pattern">last name must contain alphabets</div>
+                    </div>
+                    </div>
+                </div>
+               
+                <div class="panel panel-default offset-4">
+                    <fieldset class="col">    
+                        <legend>Shipping Address</legend>
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                 
+                            <label for="Street Address">Street Address</label>
+                                   
+                    <textarea type="text" formControlName="sa"placeholder="9-1sriram" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.sa.errors }"></textarea>
+                    <div *ngIf="submitted && f.sa.errors" class="invalid-feedback">
+                        <div *ngIf="f.sa.errors.required">street address is required</div>
+                        <div *ngIf="f.sa.errors.pattern">street address must contain alphabets and numbers</div>
+                       
+                    </div>  
+                    <label for="City">city</label>              
+                    <input type="text" formControlName="city" class="form-control" placeholder="Eg:eluru" [ngClass]="{ 'is-invalid': submitted && f.city.errors }"/>
+                    <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+                        <div *ngIf="f.city.errors.required">City is required</div>
+                        <div *ngIf="f.city.errors.pattern">City must contain alphabets</div>
+                    </div>
+                    <label for="State">State</label>              
+                    <input type="text" formControlName="state" placeholder="eg:state" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.state.errors }"/>
+                    <div *ngIf="submitted && f.state.errors" class="invalid-feedback">
+                        <div *ngIf="f.state.errors.required">State is required</div>
+                        <div *ngIf="f.state.errors.pattern">state must contain alphabets</div>
+                    </div>  
+                    <label for="Pincode">pincode</label>              
+                    <input type="number" formControlName="pn" maxlength="6" placeholder="eg:534001" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.pn.errors }"/>
+                    <div *ngIf="submitted && f.pn.errors" class="invalid-feedback">
+                        <div *ngIf="f.pn.errors.required">PinCode is required</div>
+                       
+                    </div>  
+                    <label>Country:</label>
+                    <select formControlName="country" class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.country.errors }">
+                        <option value=""></option>
+                        <option value="India">India</option>
+                        <option value="Usa">Usa</option>
+                        <option value="UK">Uk</option>
+                        <option value="China">China</option>
+                    </select>
+                    <div *ngIf="submitted && f.country.errors" class="invalid-feedback">
+                        <div *ngIf="f.country.errors.required">please select the country name</div>
+                    </div>
+                                   
+                                </div>
+                            </div>
+                       
+                        </fieldset>            
+                       
+                        <div class="clearfix"></div>
+                   
+                </div>      
+            <div class="form-group offset-4 ">
+                <label>BuyersName</label>
+                <label>FirstName</label>
+                <input type="text" formControlName="bfn" placeholder="hari" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.bfn.errors }" />
+                <div *ngIf="submitted && f.bfn.errors" class="invalid-feedback">
+                    <div *ngIf="f.bfn.errors.required">First name is required</div>
+                    <div *ngIf="f.bfn.errors.pattern"> first name must contain alphabets</div>
+                    <div *ngIf="f.bfn.errors.pattern">first name must contain alphabets</div>
+                </div>
+            </div>
+            <div class="form-group  offset-4 ">
+                <label>Last Name</label>
+                <input type="text" formControlName="bln" class="form-control" placeholder="surname" [ngClass]="{ 'is-invalid': submitted && f.bln.errors }" />
+                <div *ngIf="submitted && f.bln.errors" class="invalid-feedback">
+                    <div *ngIf="f.bln.errors.required">last name is required</div>
+                    <div *ngIf="f.bln.errors.pattern"> last name must contain alphabets</div>
+                   
+                </div>
+            </div>
+           
+            <div class="form-group  offset-4">
+                <table>
+                    <tr>
+                      <label>Mobile:</label>
+                 
+                        <td><input type="text" size="2" value="+91" readonly="readonly"></td>&nbsp;-
+                            <td> <input type="text" maxlength="10" formControlName="mobileno" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobileno.errors }" /></td>
+                        <div *ngIf="submitted && f.mobileno.errors" class="invalid-feedback">
+                            <div *ngIf="f.mobileno.errors.required">Mobile no is required</div>
+                            <div *ngIf="f.mobileno.errors.pattern">Mobile no Must be Valid</div>
+                        </div>
+                    </tr>
+                </table>
+            </div>
+               
+           
+           
+            <div class="form-group  offset-4 ">
+                <label>Email</label>
+                <input type="text" formControlName="emailid" placeholder="xyz@gmail.com" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.emailid.errors }" />
+                <div *ngIf="submitted && f.emailid.errors" class="invalid-feedback">
+                    <div *ngIf="f.emailid.errors.required">Email is required</div>
+                    <div *ngIf="f.emailid.errors.email">Email must be a valid email address</div>
+                </div>
+            </div>
+        <div class="text-center offset-3">
+            <button class="btn btn-primary mr-1">PlaceOrder</button>
+         
+        </div>
+        </form>
+    </div>
+</div>
+
+ 

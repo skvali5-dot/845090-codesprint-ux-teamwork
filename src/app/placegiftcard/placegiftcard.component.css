@@ -1,0 +1,29 @@
+#a1{
+    width: 150px;
+}
+#a2{
+    width: 60px;
+}
+#saddress{
+    width: 450px;
+}
+#f{
+    width: 500px;
+}
+#sadd3{
+    width: 170px;
+    height: 25px;
+}
+#b1{
+    background-size: 60px;
+    align-items: center;
+}
+#h3{
+    text-align: center;
+}
+#t1{
+margin-right:0 auto;
+}
+.container{
+    align-items: center;
+}
